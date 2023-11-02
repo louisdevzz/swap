@@ -29,6 +29,7 @@ export const BLACKLIST_POOL_IDS = config.BLACKLIST_POOL_IDS;
 export const STABLE_TOKEN_INDEX = config.STABLE_TOKEN_INDEX;
 export const STABLE_TOKEN_USN_INDEX = config.STABLE_TOKEN_USN_INDEX;
 
+
 export interface Transaction {
   receiverId: string;
   functionCalls: RefFiFunctionCallOptions[];
@@ -262,7 +263,7 @@ export const ALL_STABLE_POOL_IDS = [
   CUSD_STABLE_POOL_ID,
   LINEAR_POOL_ID,
   NEAX_POOL_ID,
-]
+  ]
   .filter(_ => _)
   .map(id => id.toString());
 

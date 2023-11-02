@@ -98,21 +98,17 @@ export function getExtendConfig(env: string = "testnet") {
           explorerUrl: "https://nearblocks.io",
           indexerUrl: "https://indexer.ref.finance",
           sodakiApiUrl: "https://api.stats.ref.finance/api",
-          blackList: process.env.FARM_BLACK_LIST || ["1371#3", "2769#2"],
-          REF_FI_CONTRACT_ID:
-            process.env.REF_FI_CONTRACT_ID || "v2.ref-finance.near",
-          WRAP_NEAR_CONTRACT_ID: process.env.WRAP_NEAR_CONTRACT_ID || "wrap.near",
+          blackList: ["1371#3", "2769#2"],
+          REF_FI_CONTRACT_ID:"v2.ref-finance.near",
+          WRAP_NEAR_CONTRACT_ID:  "wrap.near",
           REF_ADBOARD_CONTRACT_ID: "ref-adboard.near",
-          REF_FARM_CONTRACT_ID:
-            process.env.REF_FARM_CONTRACT_ID || "v2.ref-farming.near",
+          REF_FARM_CONTRACT_ID:"v2.ref-farming.near",
           REF_TOKEN_ID: "token.v2.ref-finance.near",
           XREF_TOKEN_ID: "xtoken.ref-finance.near",
           REF_AIRDROP_CONTRACT_ID: "s01.ref-airdrop.near",
-          TOP_POOLS_TOKEN_REFRESH_INTERVAL:
-            process.env.POOL_TOKEN_REFRESH_INTERVAL || 60,
-          POOL_TOKEN_REFRESH_INTERVAL:
-            process.env.POOL_TOKEN_REFRESH_INTERVAL || 20,
-          STABLE_POOL_USN_ID: process.env.STABLE_POOL_USN_ID || 3020,
+          TOP_POOLS_TOKEN_REFRESH_INTERVAL:60,
+          POOL_TOKEN_REFRESH_INTERVAL:20,
+          STABLE_POOL_USN_ID:3020,
           STABLE_TOKEN_USN_IDS: [
             "usn",
             "dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near",
@@ -121,8 +117,8 @@ export function getExtendConfig(env: string = "testnet") {
             usn: 0,
             "dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near": 1,
           },
-          STABLE_POOL_ID: process.env.STABLE_POOL_ID || 1910,
-          STABLE_POOL_IDS: process.env.STABLE_POOL_IDS || [
+          STABLE_POOL_ID: 1910,
+          STABLE_POOL_IDS:[
             "1910",
             "3020",
             "3364",
@@ -139,15 +135,12 @@ export function getExtendConfig(env: string = "testnet") {
             "6b175474e89094c44da98b954eedeac495271d0f.factory.bridge.near": 2,
           },
           USN_ID: "usn",
-          TOTAL_PLATFORM_FEE_REVENUE:
-            process.env.TOTAL_PLATFORM_FEE_REVENUE || "717058.623",
-          CUMULATIVE_REF_BUYBACK:
-            process.env.CUMULATIVE_REF_BUYBACK || "947340.47447",
+          TOTAL_PLATFORM_FEE_REVENUE:"717058.623",
+          CUMULATIVE_REF_BUYBACK:"947340.47447",
           BLACKLIST_POOL_IDS: [""],
-          FARM_LOCK_SWITCH: process.env.FARM_LOCK_SWITCH || 0,
+          FARM_LOCK_SWITCH:0,
           VotingGauge: ["10%", "10%"],
-          REF_FARM_BOOST_CONTRACT_ID:
-            process.env.REF_FARM_BOOST_CONTRACT_ID || "boostfarm.ref-labs.near",
+          REF_FARM_BOOST_CONTRACT_ID:"boostfarm.ref-labs.near",
         };
       case "pub-testnet":
         return {
@@ -158,31 +151,26 @@ export function getExtendConfig(env: string = "testnet") {
           explorerUrl: "https://testnet.nearblocks.io",
           indexerUrl: "https://testnet-indexer.ref-finance.com",
           sodakiApiUrl: "https://api.stats.ref.finance/api",
-          blackList: process.env.FARM_BLACK_LIST || ["1371#3"],
-          REF_FI_CONTRACT_ID:
-            process.env.REF_FI_CONTRACT_ID || "ref-finance-101.testnet",
-          WRAP_NEAR_CONTRACT_ID:
-            process.env.WRAP_NEAR_CONTRACT_ID || "wrap.testnet",
+          blackList:["1371#3"],
+          REF_FI_CONTRACT_ID:"ref-finance-101.testnet",
+          WRAP_NEAR_CONTRACT_ID:"wrap.testnet",
           REF_ADBOARD_CONTRACT_ID: "ref-adboard.near",
-          REF_FARM_CONTRACT_ID:
-            process.env.REF_FARM_CONTRACT_ID || "v2.ref-farming.testnet",
+          REF_FARM_CONTRACT_ID:"v2.ref-farming.testnet",
           REF_TOKEN_ID: "ref.fakes.testnet",
           XREF_TOKEN_ID: "xref.ref-finance.testnet",
           REF_VE_CONTRACT_ID: "v010.refve.testnet",
           REF_AIRDROP_CONTRACT_ID: "locker002.ref-dev.testnet",
-          TOP_POOLS_TOKEN_REFRESH_INTERVAL:
-            process.env.POOL_TOKEN_REFRESH_INTERVAL || 60,
-          POOL_TOKEN_REFRESH_INTERVAL:
-            process.env.POOL_TOKEN_REFRESH_INTERVAL || 20,
-          STABLE_POOL_ID: process.env.STABLE_POOL_ID || 218,
-          STABLE_POOL_IDS: process.env.STABLE_POOL_IDS || [
+          TOP_POOLS_TOKEN_REFRESH_INTERVAL:60,
+          POOL_TOKEN_REFRESH_INTERVAL:20,
+          STABLE_POOL_ID:218,
+          STABLE_POOL_IDS:[
             "218",
             "356",
             "456",
             "494",
           ],
           USN_ID: "usdn.testnet",
-          STABLE_POOL_USN_ID: process.env.STABLE_POOL_USN_ID || 356,
+          STABLE_POOL_USN_ID:356,
           STABLE_TOKEN_IDS: [
             "usdt.fakes.testnet",
             "usdc.fakes.testnet",
@@ -198,15 +186,11 @@ export function getExtendConfig(env: string = "testnet") {
             "usdc.fakes.testnet": 1,
             "dai.fakes.testnet": 2,
           },
-          TOTAL_PLATFORM_FEE_REVENUE:
-            process.env.TOTAL_PLATFORM_FEE_REVENUE || "717058.623",
-          CUMULATIVE_REF_BUYBACK:
-            process.env.CUMULATIVE_REF_BUYBACK || "947340.47447",
+          TOTAL_PLATFORM_FEE_REVENUE:"717058.623",
+          CUMULATIVE_REF_BUYBACK:"947340.47447",
           BLACKLIST_POOL_IDS: [""],
-          REF_FARM_BOOST_CONTRACT_ID:
-            process.env.REF_FARM_BOOST_CONTRACT_ID ||
-            "boostfarm.ref-finance.testnet",
-          FARM_LOCK_SWITCH: process.env.FARM_LOCK_SWITCH || 0,
+          REF_FARM_BOOST_CONTRACT_ID:"boostfarm.ref-finance.testnet",
+          FARM_LOCK_SWITCH:0,
           VotingGauge: ["10%", "10%"],
           kitWalletOn: true,
         };
@@ -219,31 +203,26 @@ export function getExtendConfig(env: string = "testnet") {
           explorerUrl: "https://testnet.nearblocks.io",
           indexerUrl: "https://dev-indexer.ref-finance.com",
           sodakiApiUrl: "https://api.stats.ref.finance/api",
-          blackList: process.env.FARM_BLACK_LIST || ["1371#3"],
-          REF_FI_CONTRACT_ID:
-            process.env.REF_FI_CONTRACT_ID || "exchange.ref-dev.testnet",
-          WRAP_NEAR_CONTRACT_ID:
-            process.env.WRAP_NEAR_CONTRACT_ID || "wrap.testnet",
+          blackList:["1371#3"],
+          REF_FI_CONTRACT_ID:"exchange.ref-dev.testnet",
+          WRAP_NEAR_CONTRACT_ID:"wrap.testnet",
           REF_ADBOARD_CONTRACT_ID: "ref-adboard.near",
-          REF_FARM_CONTRACT_ID:
-            process.env.REF_FARM_CONTRACT_ID || "farm-dev.ref-dev.testnet",
+          REF_FARM_CONTRACT_ID:"farm-dev.ref-dev.testnet",
           // REF_VE_CONTRACT_ID: 'dev-20220623151446-29039416013661',
           REF_TOKEN_ID: "ref.fakes.testnet",
           XREF_TOKEN_ID: "xref.ref-dev.testnet",
           REF_AIRDROP_CONTRACT_ID: "locker002.ref-dev.testnet",
-          TOP_POOLS_TOKEN_REFRESH_INTERVAL:
-            process.env.POOL_TOKEN_REFRESH_INTERVAL || 60,
-          POOL_TOKEN_REFRESH_INTERVAL:
-            process.env.POOL_TOKEN_REFRESH_INTERVAL || 20,
-          STABLE_POOL_ID: process.env.STABLE_POOL_ID || 79,
-          STABLE_POOL_IDS: process.env.STABLE_POOL_IDS || [
+          TOP_POOLS_TOKEN_REFRESH_INTERVAL:60,
+          POOL_TOKEN_REFRESH_INTERVAL:20,
+          STABLE_POOL_ID:79,
+          STABLE_POOL_IDS:[
             "79",
             "603",
             "604",
             "608",
           ],
           USN_ID: "usdn.testnet",
-          STABLE_POOL_USN_ID: process.env.STABLE_POOL_USN_ID || 603,
+          STABLE_POOL_USN_ID:603,
           STABLE_TOKEN_IDS: [
             "usdt.fakes.testnet",
             "usdc.fakes.testnet",
@@ -259,15 +238,11 @@ export function getExtendConfig(env: string = "testnet") {
             "usdc.fakes.testnet": 1,
             "dai.fakes.testnet": 2,
           },
-          TOTAL_PLATFORM_FEE_REVENUE:
-            process.env.TOTAL_PLATFORM_FEE_REVENUE || "717058.623",
-          CUMULATIVE_REF_BUYBACK:
-            process.env.CUMULATIVE_REF_BUYBACK || "947340.47447",
+          TOTAL_PLATFORM_FEE_REVENUE:"717058.623",
+          CUMULATIVE_REF_BUYBACK:"947340.47447",
           BLACKLIST_POOL_IDS: [""],
-          REF_FARM_BOOST_CONTRACT_ID:
-            process.env.REF_FARM_BOOST_CONTRACT_ID ||
-            "boostfarm024.ref-dev.testnet",
-          FARM_LOCK_SWITCH: process.env.FARM_LOCK_SWITCH || 0,
+          REF_FARM_BOOST_CONTRACT_ID:"boostfarm024.ref-dev.testnet",
+          FARM_LOCK_SWITCH:0,
           VotingGauge: ["5%", "10%"],
           kitWalletOn: true,
         };
@@ -280,20 +255,16 @@ export function getExtendConfig(env: string = "testnet") {
           explorerUrl: "https://nearblocks.io",
           indexerUrl: "https://indexer.ref.finance",
           sodakiApiUrl: "https://api.stats.ref.finance/api",
-          blackList: process.env.FARM_BLACK_LIST || ["1371#3", "2769#2"],
-          REF_FI_CONTRACT_ID:
-            process.env.REF_FI_CONTRACT_ID || "v2.ref-finance.near",
-          WRAP_NEAR_CONTRACT_ID: process.env.WRAP_NEAR_CONTRACT_ID || "wrap.near",
+          blackList:["1371#3", "2769#2"],
+          REF_FI_CONTRACT_ID:"v2.ref-finance.near",
+          WRAP_NEAR_CONTRACT_ID:"wrap.near",
           REF_ADBOARD_CONTRACT_ID: "ref-adboard.near",
-          REF_FARM_CONTRACT_ID:
-            process.env.REF_FARM_CONTRACT_ID || "v2.ref-farming.near",
+          REF_FARM_CONTRACT_ID:"v2.ref-farming.near",
           REF_TOKEN_ID: "token.v2.ref-finance.near",
           XREF_TOKEN_ID: "xtoken.ref-finance.near",
           REF_AIRDROP_CONTRACT_ID: "s01.ref-airdrop.near",
-          TOP_POOLS_TOKEN_REFRESH_INTERVAL:
-            process.env.POOL_TOKEN_REFRESH_INTERVAL || 60,
-          POOL_TOKEN_REFRESH_INTERVAL:
-            process.env.POOL_TOKEN_REFRESH_INTERVAL || 20,
+          TOP_POOLS_TOKEN_REFRESH_INTERVAL:60,
+          POOL_TOKEN_REFRESH_INTERVAL:20,
           BTC_POOL_ID: "3364",
           BTCIDS: [
             "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near",
@@ -303,7 +274,7 @@ export function getExtendConfig(env: string = "testnet") {
             "2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near": 0,
             "0316eb71485b0ab14103307bf65a021042c6d380.factory.bridge.near": 1,
           },
-          STABLE_POOL_USN_ID: process.env.STABLE_POOL_USN_ID || 3020,
+          STABLE_POOL_USN_ID:3020,
           STABLE_TOKEN_USN_IDS: [
             "usn",
             "dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near",
@@ -312,8 +283,8 @@ export function getExtendConfig(env: string = "testnet") {
             usn: 0,
             "dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near": 1,
           },
-          STABLE_POOL_ID: process.env.STABLE_POOL_ID || 1910,
-          STABLE_POOL_IDS: process.env.STABLE_POOL_IDS || [
+          STABLE_POOL_ID:1910,
+          STABLE_POOL_IDS:[
             "1910",
             "3020",
             "3364",
@@ -330,15 +301,12 @@ export function getExtendConfig(env: string = "testnet") {
             "6b175474e89094c44da98b954eedeac495271d0f.factory.bridge.near": 2,
           },
           USN_ID: "usn",
-          TOTAL_PLATFORM_FEE_REVENUE:
-            process.env.TOTAL_PLATFORM_FEE_REVENUE || "717058.623",
-          CUMULATIVE_REF_BUYBACK:
-            process.env.CUMULATIVE_REF_BUYBACK || "947340.47447",
+          TOTAL_PLATFORM_FEE_REVENUE:"717058.623",
+          CUMULATIVE_REF_BUYBACK:"947340.47447",
           BLACKLIST_POOL_IDS: [""],
-          FARM_LOCK_SWITCH: process.env.FARM_LOCK_SWITCH || 0,
+          FARM_LOCK_SWITCH:0,
           VotingGauge: ["10%", "10%"],
-          REF_FARM_BOOST_CONTRACT_ID:
-            process.env.REF_FARM_BOOST_CONTRACT_ID || "boostfarm.ref-labs.near",
+          REF_FARM_BOOST_CONTRACT_ID:"boostfarm.ref-labs.near",
         };
     }
   }
@@ -492,7 +460,7 @@ export function getExtendConfig(env: string = "testnet") {
     }
   }
   
-  export const ACCOUNT_ID = process.env.REACT_APP_ACCOUNT_ID;
-  export const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
+  export const ACCOUNT_ID = process.env.NEXT_PUBLIC_RELAYER_ACCOUNT_ID_NEAR_TESTNET;
+  export const PRIVATE_KEY = process.env.RELAYER_PRIVATE_KEY_NEAR_TESTNET;
   export const STORAGE_TO_REGISTER_WITH_MFT = "0.1";
   export const ONE_YOCTO_NEAR = "0.000000000000000000000001";

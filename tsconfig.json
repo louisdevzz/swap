@@ -7,7 +7,6 @@
       "esnext"
     ],
     "allowJs": true,
-    "outDir": "dist", //require
     "skipLibCheck": true,
     "strict": true,
     "moduleResolution": "node",
@@ -22,33 +21,23 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
     "paths": {
-      "@modules/*": [
-        "src/modules/*"
-      ],
       "*": [
         "node_modules/*"
       ],
       "@/*": [
         "./*"
-      ]
+      ],
+      "config": ["./helpers/utils/near/config"],
     },
+    "rootDirs": ["./helper", "helper/utils/near"],
     "resolveJsonModule": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "./helper/utils/near/*.ts"
   ],
   "exclude": [
     "node_modules"
   ],
-  "ts-node": {
-    "require": [
-      "tsconfig-paths/register"
-    ],
-    "esm": true,
-    "experimentalSpecifierResolution": "node",
-    "transpileOnly": true
-  }
 }
