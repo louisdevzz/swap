@@ -1,9 +1,9 @@
 const nearAPI  = require('near-api-js');
 const { connect, KeyPair, keyStores,Contract,utils,transactions} = nearAPI;
 const BN = require('bn.js');
-const axios=require("axios");
+import axios from "axios";
 const math=require("mathjs");
-const {getConfig,getExtraStablePoolConfig} = require('./helper/utils/near/config')
+import {getConfig,getExtraStablePoolConfig} from '../../../helper/utils/near/config';
 // const {
 //   getExtraStablePoolConfig,getConfig
 // } =require("./helper/utils/near/config");
@@ -48,13 +48,13 @@ const {
 const {
   STABLE_POOL_USN_ID,
   STABLE_TOKEN_IDS,
+  STABLE_POOL_ID,
   STABLE_TOKEN_USN_IDS,
-} = require("./helper/utils/near/utils");
+} = require("../../../helper/utils/near/utils");
 
-async function handler() {
+export default async function handler(req,res) {
     // sets up an empty keyStore object in memory using near-api-js
     const keyStore = new keyStores.InMemoryKeyStore();
-    console.log(config.BLACKLIST_POOL_IDS)
     // creates a keyPair from the private key provided in your .env file
     const keyPair = KeyPair.fromString(process.env.RELAYER_PRIVATE_KEY_NEAR_TESTNET);
     // adds the key you just created to your keyStore which can hold multiple keys
@@ -306,9 +306,7 @@ async function handler() {
         }
       
         const negative = Number(strParam) < 0 ? "-" : "";
-        // @ts-ignore: Object is possibly 'null'.
         let index = Number(strParam.match(/\d+$/)[0]);
-        // @ts-ignore: Object is possibly 'null'.
         let basis = strParam.match(/[\d\.]+/)[0];
       
         const ifFraction = basis.includes(".");
@@ -1228,7 +1226,13 @@ async function handler() {
           refTodos,
         };
       };
+      try{
+        console.log(getUserTokens())
+        res.status(200).json({getUserTokens})
+      }catch(error){
+        console.log(error)
+        res.status(500).json({error})
+      }
 }
-handler()
 
 
