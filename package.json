@@ -1,0 +1,39 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@near-wallet-selector/core": "^8.7.0",
+    "@types/axios": "^0.14.0",
+    "@types/big.js": "^6.2.1",
+    "@types/bignumber.js": "^5.0.0",
+    "@types/bn.js": "^5.1.4",
+    "@types/lodash": "^4.14.200",
+    "@types/mathjs": "^9.4.2",
+    "@types/moment": "^2.13.0",
+    "@types/react-intl": "^3.0.0",
+    "big.js": "^6.2.1",
+    "bn.js": "^5.2.1",
+    "dotenv": "^16.3.1",
+    "lodash": "^4.17.21",
+    "near-api-js": "^2.1.4",
+    "next": "14.0.1",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
